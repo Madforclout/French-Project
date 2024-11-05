@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>French Legends and Folktales</title>
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #fdf3e3;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        
+        .sidebar {
+            flex: 0 0 30%;
+            background-color: #43406d;
+            color: white;
+            padding: 20px;
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            opacity: 0.8;
+        }
+
+        .sidebar h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .sidebar p {
+            font-size: 1.2rem;
+            margin-top: 20px;
+        }
+
+        .sidebar .group-members {
+            text-align: left;
+            margin-top: 20px;
+            font-size: 1rem;
+        }
+
+        
+        .content {
+            flex: 1;
+            margin-left: 32%;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        section h2 {
+            color: #60180a;
+            margin-bottom: 15px;
+            font-size: 2.5rem;
+            cursor: pointer;
+        }
+
+        section p,
+        section img {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            display: none;
+            
+        }
+
+        section img {
+            width: 100%;
+            max-width: 400px;
+            margin-top: 10px;
+        }
+
+        footer {
+            background-color: #60180a;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 40px;
+        }
+
+    
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://imgs.search.brave.com/_Av3xxHfbsqQvYyqZYz4EHA-BQh-FU1H2wpQoJ9tbVU/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAxLzI2Lzk1LzYz/LzM2MF9GXzEyNjk1/NjMzNl9IUjJrOE00/Mm96Q3Fza3BuWmdI/dmQ0Q3Ixa2JBcTNs/eS5qcGc') no-repeat center center fixed;
+            background-size: cover;
+            opacity: 0.5; /* Translucent effect */
+            z-index: -1;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!--names of group members-->
+        <div class="sidebar">
+            <h1>French Legends and Folktales</h1>
+            <p>Group Members:</p>
+            <div class="group-members">
+                <p>1. C Vaishnavi-RA2411003010895</p>
+                <p>2. V Sowmya-RA2411003010947</p>
+                <p>3. Saksham Thapar-RA2411003010886</p>
+                <p>4. Adrija-RA2411003010902</p>
+                <p>5. Kamya Singhal-RA2411003010911</p>
+                <p>6. Shameek Pnesar-RA2411003010932</p>
+            </div>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+            
+            <section id="templars">
+                <h2 onclick="toggleDescription(this)">The Treasure of the Templars</h2>
+                <p>The treasure of templars</p>
+            </section>
+
+            
+            <section id="ghosts">
+                <h2 onclick="toggleDescription(this)">Famous Ghost Sightings</h2>
+                <p>Famous Ghost sighting</p>
+               
+            </section>
+
+            
+            <section id="perrault">
+                <h2 onclick="toggleDescription(this)">The Tales of Charles Perrault</h2>
+                <p>The Tales of Charles Perrault</p>
+               
+            </section>
+
+          
+            <section id="lafontaine">
+                <h2 onclick="toggleDescription(this)">The Fables of Lafontaine</h2>
+                <p>The Fables of Lafontaine</p>
+               
+            </section>
+
+          
+            <section id="fox">
+                <h2 onclick="toggleDescription(this)">The Tale of the Fox</h2>
+                <p>The tale of fox</p>
+               
+            </section>
+
+      
+            <section id="roland">
+                <h2 onclick="toggleDescription(this)">The Song of Roland</h2>
+                <p>The song of Roland</p>
+                
+            </section>
+
+          
+            <section id="bayard">
+                <h2 onclick="toggleDescription(this)">Bayard, the Magical Horse</h2>
+                <p>The magicsal horse</p>
+            
+            </section>
+
+            
+            <section id="gevaudan">
+                <h2 onclick="toggleDescription(this)">The Beast of Gévaudan</h2>
+                <p>Beast of Gevaudan</p>
+                
+            </section>
+
+        
+            <section id="melusine">
+                <h2 onclick="toggleDescription(this)">The Fairy Mélusine</h2>
+                <p>The Fairy</p>
+                
+            </section>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript function to toggle description and image display
+        function toggleDescription(element) {
+            var paragraph = element.nextElementSibling;
+            var image = paragraph.nextElementSibling;
+            var isVisible = window.getComputedStyle(paragraph).display !== "none";
+            
+            // Toggle description and image display
+            if (isVisible) {
+                paragraph.style.display = "none";
+                image.style.display = "none";
+            } else {
+                paragraph.style.display = "block";
+                image.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
