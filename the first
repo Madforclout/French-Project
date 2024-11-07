@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>French Legends and Folktales</title>
     <style>
-        
+        /* Basic CSS Reset */
         * {
             margin: 0;
             padding: 0;
@@ -14,7 +14,7 @@
 
         body {
             font-family: 'Georgia', serif;
-            background-color: #fdf3e3;
+            background: linear-gradient(to right, #0055A4, #ffffff, #EF4135); /* French Flag Background (blue, white, red) */
             color: #333;
             line-height: 1.6;
         }
@@ -23,7 +23,7 @@
             display: flex;
         }
 
-        
+        /* Styling the Sidebar */
         .sidebar {
             flex: 0 0 30%;
             background-color: #43406d;
@@ -57,7 +57,7 @@
             font-size: 1rem;
         }
 
-        
+        /* Content styling */
         .content {
             flex: 1;
             margin-left: 32%;
@@ -77,20 +77,6 @@
             cursor: pointer;
         }
 
-        section p,
-        section img {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-            display: none;
-            
-        }
-
-        section img {
-            width: 100%;
-            max-width: 400px;
-            margin-top: 10px;
-        }
-
         footer {
             background-color: #60180a;
             color: white;
@@ -99,25 +85,16 @@
             margin-top: 40px;
         }
 
-    
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('https://imgs.search.brave.com/_Av3xxHfbsqQvYyqZYz4EHA-BQh-FU1H2wpQoJ9tbVU/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAxLzI2Lzk1LzYz/LzM2MF9GXzEyNjk1/NjMzNl9IUjJrOE00/Mm96Q3Fza3BuWmdI/dmQ0Q3Ixa2JBcTNs/eS5qcGc') no-repeat center center fixed;
-            background-size: cover;
-            opacity: 0.5; /* Translucent effect */
-            z-index: -1;
+        a {
+            text-decoration: none;
+            color: inherit;
         }
 
     </style>
 </head>
 <body>
     <div class="container">
-        <!--names of group members-->
+        <!-- Sidebar -->
         <div class="sidebar">
             <h1>French Legends and Folktales</h1>
             <p>Group Members:</p>
@@ -127,92 +104,38 @@
                 <p>3. Saksham Thapar-RA2411003010886</p>
                 <p>4. Adrija-RA2411003010902</p>
                 <p>5. Kamya Singhal-RA2411003010911</p>
-                <p>6. Shameek Pnesar-RA2411003010932</p>
+                <p>6. Shameek Panesar-RA2411003010932</p>
             </div>
         </div>
 
         <!-- Content -->
         <div class="content">
-            
+            <!-- Section: The Treasure of the Templars -->
             <section id="templars">
-                <h2 onclick="toggleDescription(this)">The Treasure of the Templars</h2>
-                <p>The treasure of templars</p>
+                <h2><a href="templars.html">The Treasure of the Templars</a></h2>
             </section>
 
-            
-            <section id="ghosts">
-                <h2 onclick="toggleDescription(this)">Famous Ghost Sightings</h2>
-                <p>Famous Ghost sighting</p>
-               
+            <section id="phantom">
+                <h2><a href="phantom.html">Phantom of Opera</a></h2>
             </section>
 
-            
-            <section id="perrault">
-                <h2 onclick="toggleDescription(this)">The Tales of Charles Perrault</h2>
-                <p>The Tales of Charles Perrault</p>
-               
+            <!--Jeanne D'Arc-->
+            <section id="D'Arc">
+                <h2><a href="D'Arc.html">Jeanne D' Arc</a></h2>
             </section>
 
-          
-            <section id="lafontaine">
-                <h2 onclick="toggleDescription(this)">The Fables of Lafontaine</h2>
-                <p>The Fables of Lafontaine</p>
-               
-            </section>
-
-          
-            <section id="fox">
-                <h2 onclick="toggleDescription(this)">The Tale of the Fox</h2>
-                <p>The tale of fox</p>
-               
-            </section>
-
-      
-            <section id="roland">
-                <h2 onclick="toggleDescription(this)">The Song of Roland</h2>
-                <p>The song of Roland</p>
-                
-            </section>
-
-          
+            <!-- Section: Bayard, the Magical Horse -->
             <section id="bayard">
-                <h2 onclick="toggleDescription(this)">Bayard, the Magical Horse</h2>
-                <p>The magicsal horse</p>
-            
+                <h2><a href="bayard.html">Bayard, the Magical Horse, the four sons of Aymon, and Renaud de Montauban</a></h2>
             </section>
 
-            
+            <!-- Section: The Beast of Gévaudan -->
             <section id="gevaudan">
-                <h2 onclick="toggleDescription(this)">The Beast of Gévaudan</h2>
-                <p>Beast of Gevaudan</p>
-                
+                <h2><a href="gevaudan.html">The Beast of Gévaudan</a></h2>
             </section>
 
-        
-            <section id="melusine">
-                <h2 onclick="toggleDescription(this)">The Fairy Mélusine</h2>
-                <p>The Fairy</p>
-                
-            </section>
         </div>
     </div>
 
-    <script>
-        // JavaScript function to toggle description and image display
-        function toggleDescription(element) {
-            var paragraph = element.nextElementSibling;
-            var image = paragraph.nextElementSibling;
-            var isVisible = window.getComputedStyle(paragraph).display !== "none";
-            
-            // Toggle description and image display
-            if (isVisible) {
-                paragraph.style.display = "none";
-                image.style.display = "none";
-            } else {
-                paragraph.style.display = "block";
-                image.style.display = "block";
-            }
-        }
-    </script>
 </body>
 </html>
